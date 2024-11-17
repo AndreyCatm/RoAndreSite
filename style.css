@@ -17,6 +17,14 @@ body {
     transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
+.screenshot {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    border-radius: var(--button-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -155,6 +163,21 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+.theme-toggle {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: var(--button-radius);
+    transition: all var(--transition-speed);
+}
+
+.theme-toggle:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
 /* Секция "Почему мы?" */
 #why-us.hidden {
     display: none;
