@@ -4,28 +4,6 @@ function toggleWhyUs() {
     whyUsSection.classList.toggle('hidden');
 }
 
-function toggleTheme() {
-    const root = document.documentElement;
-    const isDarkMode = root.style.getPropertyValue('--background-color') === '#000000';
-
-    if (isDarkMode) {
-        root.style.setProperty('--background-color', '#ffffff');
-        root.style.setProperty('--text-color', '#000000');
-        root.style.setProperty('--primary-color', '#4CAF50');
-        root.style.setProperty('--accent-color', '#FF0000');
-    } else {
-        root.style.setProperty('--background-color', '#000000');
-        root.style.setProperty('--text-color', '#ffffff');
-        root.style.setProperty('--primary-color', '#1a1a1a');
-        root.style.setProperty('--accent-color', '#FF5722');
-    }
-}
-
-function toggleWhyUs() {
-    const whyUsSection = document.getElementById('why-us');
-    whyUsSection.classList.toggle('hidden');
-}
-
 function toggleSettings() {
     const settingsMenu = document.getElementById('settings-menu');
     settingsMenu.classList.toggle('hidden');
@@ -47,7 +25,8 @@ function changeTheme(theme) {
 }
 
 function changeLanguage(language) {
-    const content = {
+    // Language data
+    const translations = {
         en: {
             intro: "The Best Extension for Roblox!",
             whyUs: "Why Us?",
@@ -72,12 +51,12 @@ function changeLanguage(language) {
         }
     };
 
-    const selected = content[language];
-    document.querySelector(".intro h2").innerHTML = `<strong>${selected.intro}</strong>`;
-    document.querySelector("#why-us h2").textContent = selected.whyUs;
-    document.querySelectorAll("#why-us ul li").forEach((li, index) => {
-        li.textContent = selected.reasons[index];
+    const content = translations[language];
+    document.querySelector(".intro h2").innerHTML = `<strong>${content.intro}</strong>`;
+    document.querySelector("#why-us h2").textContent = content.whyUs;
+    document.querySelectorAll("#why-us ul li").forEach((li, i) => {
+        li.textContent = content.reasons[i];
     });
-    document.querySelector(".try-now").textContent = selected.tryNow;
-    document.querySelector(".why-us-btn").textContent = selected.whyUsBtn;
+    document.querySelector(".try-now").textContent = content.tryNow;
+    document.querySelector(".why-us-btn").textContent = content.whyUsBtn;
 }
