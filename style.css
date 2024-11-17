@@ -1,4 +1,4 @@
-/* Основные переменные */
+/* Основные стили */
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
@@ -25,7 +25,7 @@ body {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Заголовок */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -59,23 +59,18 @@ nav ul li a:hover {
     color: var(--accent-color);
 }
 
-.theme-toggle {
+.settings-btn {
     background-color: #fff;
     color: var(--primary-color);
     border: none;
     padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
     border-radius: var(--button-radius);
+    font-weight: bold;
+    cursor: pointer;
     transition: all var(--transition-speed);
 }
 
-.theme-toggle:hover {
-    background-color: var(--accent-color);
-    color: #fff;
-}
-
-/* Основная часть */
+/* Intro Section */
 .intro {
     text-align: center;
     margin: 50px 0;
@@ -88,58 +83,9 @@ nav ul li a:hover {
     color: var(--accent-color);
     font-weight: bold;
     font-size: 1.5em;
-    transition: color var(--transition-speed);
 }
 
-.screenshot {
-    display: block;
-    margin: 20px auto;
-    max-width: 80%;
-    border-radius: var(--button-radius);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.cta {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.btn {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 10px;
-    border: none;
-    border-radius: var(--button-radius);
-    cursor: pointer;
-    transition: all var(--transition-speed);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.try-now {
-    background-color: var(--primary-color);
-    color: #fff;
-}
-
-.why-us-btn {
-    background-color: var(--accent-color);
-    color: #fff;
-}
-
-.btn:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-}
-
-/* Секция "Почему мы?" */
-#why-us.hidden {
-    display: none;
-}
-
-footer {
-    text-align: center;
-
-/* Настройки */
+/* Settings Menu */
 .settings-menu {
     position: fixed;
     top: 50%;
@@ -150,30 +96,16 @@ footer {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
     width: 300px;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    transition: transform var(--transition-speed), opacity var(--transition-speed);
+    z-index: 1000;
 }
 
 .settings-menu.hidden {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-    pointer-events: none;
-}
-
-.settings-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.settings-item label {
-    font-weight: bold;
+    display: none;
 }
 
 .close-btn {
@@ -183,15 +115,9 @@ footer {
     padding: 10px 20px;
     border-radius: var(--button-radius);
     cursor: pointer;
-    transition: opacity var(--transition-speed);
 }
 
-.close-btn:hover {
-    opacity: 0.8;
-}
-
-    padding: 15px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border-radius: 0 0 20px 20px;
+/* Transition */
+.btn:hover, .settings-btn:hover {
+    transform: scale(1.05);
 }
