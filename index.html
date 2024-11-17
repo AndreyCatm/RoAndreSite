@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,40 +15,60 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Функции</a></li>
-                    <li><a href="#why-us">Почему мы?</a></li>
-                    <li><a href="#">Поддержка</a></li>
-                    <li><a href="#">Регистрация</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#why-us">Why Us?</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Register</a></li>
                 </ul>
-                <button class="theme-toggle" onclick="toggleTheme()">Сменить тему</button>
+                <button class="settings-btn" onclick="toggleSettings()">Settings</button>
             </nav>
         </header>
         
         <main>
             <section class="intro">
-                <h2><strong>Лучшее расширение для <span class="roblox-text">Roblox!</span></strong></h2>
-                <img src="idk.png" alt="Скриншот" class="screenshot">
+                <h2><strong>The Best Extension for <span class="roblox-text">Roblox!</span></strong></h2>
+                <img src="idk.png" alt="Screenshot" class="screenshot">
             </section>
             
             <section class="cta">
-                <button class="btn try-now">Попробовать сейчас</button>
-                <button class="btn why-us-btn" onclick="toggleWhyUs()">Почему мы?</button>
+                <button class="btn try-now">Try Now</button>
+                <button class="btn why-us-btn" onclick="toggleWhyUs()">Why Us?</button>
             </section>
             
             <section id="why-us" class="why-us hidden">
-                <h2>Почему мы?</h2>
+                <h2>Why Us?</h2>
                 <ul>
-                    <li>Мы предоставляем комфорт использования веб-сайта Roblox</li>
-                    <li>Новые возможности: система уровней, баннеры и многое другое!</li>
-                    <li>Круглосуточная поддержка на нашем Discord-сервере</li>
+                    <li>We provide a seamless Roblox website experience</li>
+                    <li>New features like level systems, banners, and more!</li>
+                    <li>24/7 support on our Discord server</li>
                 </ul>
             </section>
         </main>
         
         <footer>
-            <p>&copy; 2024 RoAndre. Все права защищены.</p>
+            <p>&copy; 2024 RoAndre. All rights reserved.</p>
         </footer>
+
+        <!-- Settings Menu -->
+        <div id="settings-menu" class="settings-menu hidden">
+            <h2>Settings</h2>
+            <div class="settings-item">
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select" onchange="changeTheme(this.value)">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+            <div class="settings-item">
+                <label for="language-select">Language:</label>
+                <select id="language-select" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="ru">Русский</option>
+                </select>
+            </div>
+            <button class="close-btn" onclick="toggleSettings()">Close</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
