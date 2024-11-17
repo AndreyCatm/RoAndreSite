@@ -121,3 +121,32 @@ nav ul li a:hover {
 .btn:hover, .settings-btn:hover {
     transform: scale(1.05);
 }
+
+.try-now {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.why-us-btn {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Секция "Почему мы?" */
+#why-us.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+}
+
