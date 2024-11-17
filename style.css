@@ -1,0 +1,55 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.intro {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.roblox-text {
+    color: #FF0000;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.screenshot {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.cta {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.try-now, .why-us-btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px;
+}
+
+#why-us.hidden {
+    display: none;
+}
