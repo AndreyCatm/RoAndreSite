@@ -7,47 +7,49 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="RoAndre.png" alt="RoAndre Logo">
-            <h1>RoAndre</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Функции</a></li>
-                <li><a href="#why-us">Почему мы?</a></li>
-                <li><a href="#">Поддержка</a></li>
-                <li><a href="#">Регистрация</a></li>
-            </ul>
-            <button class="theme-toggle" onclick="toggleTheme()">Сменить тему</button>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="intro">
-            <h2><strong>Лучшее расширение для <span class="roblox-text">Roblox!</span></strong></h2>
-            <img src="idk.png" alt="Скриншот" class="screenshot">
-        </section>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="RoAndre.png" alt="RoAndre Logo">
+                <h1>RoAndre</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Функции</a></li>
+                    <li><a href="#why-us">Почему мы?</a></li>
+                    <li><a href="#">Поддержка</a></li>
+                    <li><a href="#">Регистрация</a></li>
+                </ul>
+                <button class="theme-toggle" onclick="toggleTheme()">Сменить тему</button>
+            </nav>
+        </header>
         
-        <section class="cta">
-            <button class="try-now">Попробовать сейчас</button>
-            <button class="why-us-btn" onclick="toggleWhyUs()">Почему мы?</button>
-        </section>
+        <main>
+            <section class="intro">
+                <h2><strong>Лучшее расширение для <span class="roblox-text">Roblox!</span></strong></h2>
+                <img src="idk.png" alt="Скриншот" class="screenshot">
+            </section>
+            
+            <section class="cta">
+                <button class="btn try-now">Попробовать сейчас</button>
+                <button class="btn why-us-btn" onclick="toggleWhyUs()">Почему мы?</button>
+            </section>
+            
+            <section id="why-us" class="why-us hidden">
+                <h2>Почему мы?</h2>
+                <ul>
+                    <li>Мы предоставляем комфорт использования веб-сайта Roblox</li>
+                    <li>Новые возможности: система уровней, баннеры и многое другое!</li>
+                    <li>Круглосуточная поддержка на нашем Discord-сервере</li>
+                </ul>
+            </section>
+        </main>
         
-        <section id="why-us" class="why-us hidden">
-            <h2>Почему мы?</h2>
-            <ul>
-                <li>Мы предоставляем комфорт использования веб-сайта Roblox</li>
-                <li>Новые возможности: система уровней, баннеры и многое другое!</li>
-                <li>Круглосуточная поддержка на нашем Discord-сервере</li>
-            </ul>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 RoAndre. Все права защищены.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2024 RoAndre. Все права защищены.</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
