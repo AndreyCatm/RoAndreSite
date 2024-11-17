@@ -1,19 +1,31 @@
-/* Основные стили */
+/* Основные переменные */
 :root {
     --background-color: #ffffff;
     --text-color: #000000;
     --primary-color: #4CAF50;
     --accent-color: #FF0000;
+    --button-radius: 30px;
+    --transition-speed: 0.4s;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовок */
 header {
     display: flex;
     justify-content: space-between;
@@ -21,23 +33,30 @@ header {
     padding: 20px;
     background-color: var(--primary-color);
     color: #fff;
+    border-radius: 20px 20px 0 0;
 }
 
 .logo img {
     height: 50px;
     margin-right: 10px;
+    border-radius: var(--button-radius);
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color var(--transition-speed);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
 }
 
 .theme-toggle {
@@ -47,8 +66,8 @@ nav ul li a {
     padding: 10px 20px;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: var(--button-radius);
+    transition: all var(--transition-speed);
 }
 
 .theme-toggle:hover {
@@ -56,37 +75,45 @@ nav ul li a {
     color: #fff;
 }
 
+/* Основная часть */
 .intro {
     text-align: center;
     margin: 50px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
 }
 
 .roblox-text {
     color: var(--accent-color);
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.5em;
+    transition: color var(--transition-speed);
 }
 
 .screenshot {
     display: block;
     margin: 20px auto;
-    max-width: 100%;
-    border: 3px solid var(--primary-color);
+    max-width: 80%;
+    border-radius: var(--button-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .cta {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
 }
 
-.try-now, .why-us-btn {
+.btn {
     padding: 15px 30px;
     font-size: 1.2em;
     font-weight: bold;
-    margin: 5px;
+    margin: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--button-radius);
     cursor: pointer;
+    transition: all var(--transition-speed);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .try-now {
@@ -99,17 +126,20 @@ nav ul li a {
     color: #fff;
 }
 
-.try-now:hover, .why-us-btn:hover {
-    opacity: 0.8;
+.btn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
 }
 
+/* Секция "Почему мы?" */
 #why-us.hidden {
     display: none;
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
+    padding: 15px;
     background-color: var(--primary-color);
     color: #fff;
+    border-radius: 0 0 20px 20px;
 }
