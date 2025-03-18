@@ -149,6 +149,36 @@ header nav ul li a:hover {
     background: var(--accent-color);
 }
 
+/* Секция "Функции" */
+.features {
+    margin-top: 40px;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    background: var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 30%; /* 3 колонки на больших экранах */
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-time);
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
     header {
@@ -167,6 +197,10 @@ header nav ul li a:hover {
 
     .screenshot {
         max-width: 100%;
+    }
+
+    .feature-item {
+        flex: 1 1 100%; /* 1 колонка на мобильных устройствах */
     }
 }
 
