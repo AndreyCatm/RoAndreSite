@@ -173,10 +173,17 @@ header nav ul li a:hover {
     flex: 1 1 30%; /* 3 колонки на больших экранах */
     box-shadow: var(--box-shadow);
     transition: transform var(--transition-time);
+    text-align: center;
 }
 
 .feature-item:hover {
     transform: scale(1.05);
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 /* Адаптивность */
@@ -214,3 +221,4 @@ header nav ul li a:hover {
         text-align: center;
     }
 }
+
